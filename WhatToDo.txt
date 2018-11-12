@@ -1,0 +1,31 @@
+each process has a privilege level between 0 to 2 (including).
+
+by default, all processes have the entry policy on "off"
+and the default privilege level is 2 (defined when fork is used)
+and a new empty activity log will be created.
+when policy is set off, its log will be removed.
+
+forbidden activities:
+		system call:			fork()	wait()	sched_yield()	others
+		minimum threshold:		2		1		1				0
+
+a process with policy "on" AND a privilege level lower than the above,
+CANNOT execute the sys call. If it tries, the call fails, recorded and returns -EINVAL.
+
+log struct:
+
+		struct forbidden_activity_info {
+			int syscall_req_level;	# the threshold of the sys call
+			int proc_level;			# the process privilege level at the time
+			int time;				# the time
+		}
+		
+the order of the activities will be by occurring time.
+
+######	this struct needs to be defined in both kernel and user code!
+######	hw1_syscalls.h should be copied to both the kernel and the home (~) folder.
+
+
+other files that are relevant:
+	fork.c, sched.h, sched.c and exit.c
+	
