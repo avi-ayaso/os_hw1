@@ -1,5 +1,7 @@
-system call number 244
-int disable_policy (pid_t pid ,int password)
+// this file is part of the kernel
+#include "sys_calls_utils.h"
+
+/* system call number 244
 
 Description
 Disable the enforcement of the policy for the process with PID=pid if the password is indeed the
@@ -15,3 +17,20 @@ Return values
 		o If the policy feature is already off for this process, errno should contain EINVAL .
 		o If password is incorrect errno should contain EINVAL
 		o On any other failure errno should contain EINVAL
+
+
+*/
+int sys_disable_policy (pid_t pid ,int password)
+	_CHECK_PID(pid);  			// check if pid >= 0
+	_PID_EXISTS(pid);		// check if pid exists in hash table
+	task_t * p = find_task_by_pid(pid);
+	if (p->entry_policy == false) {
+		return _EINVAL;
+	}
+	_CHECK_PASSWORD(password); // check if password is 234123
+	p->entry_policy = false;
+	// should delete log here by function etc.
+	p->max_violations = 0;
+	p->num_of_violations = 0;
+	return 0;
+}

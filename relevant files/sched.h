@@ -141,6 +141,11 @@ extern spinlock_t mmlist_lock;
 
 typedef struct task_struct task_t;
 
+// for hw1 log file struct
+typedef struct forbidden_activity_info_t forbidden_activity_info;
+typedef log_list_t log_list;
+//
+
 extern void sched_init(void);
 extern void init_idle(task_t *idle, int cpu);
 extern void show_state(void);
@@ -318,6 +323,15 @@ extern struct user_struct root_user;
 
 typedef struct prio_array prio_array_t;
 
+// for hw1 log file struct implementation
+struct forbidden_activity_info {
+	int syscall_req_level;	# the threshold of the sys call
+	int proc_level;			# the process privilege level at the time
+	int time;				# the time
+	
+	//struct list_head _list;
+};
+
 struct task_struct {
 	/*
 	 * offsets of these are hardcoded elsewhere - touch with care
@@ -345,6 +359,8 @@ struct task_struct {
 
 	unsigned long sleep_avg;
 	unsigned long sleep_timestamp;
+	
+
 
 	unsigned long policy;
 	unsigned long cpus_allowed;
@@ -363,6 +379,27 @@ struct task_struct {
 	unsigned long personality;
 	int did_exec:1;
 	pid_t pid;
+
+	// for hw1 addtional fields
+	bool entry_policy;
+	int priv_level;
+	forbidden_activity_info * forbidden_log;
+	int max_violations;
+	int num_of_violations;
+	log_list * violation_list;
+	
+	//struct list_head log_list;
+
+	struct log_list_t {
+		log_list * _next;
+		log_list * _prev;
+		forbidden_activity_info _data;
+		// TODO
+	};
+
+	// end of hw1 additional fields
+
+
 	pid_t pgrp;
 	pid_t tty_old_pgrp;
 	pid_t session;

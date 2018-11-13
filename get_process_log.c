@@ -1,5 +1,9 @@
+// this file is part of the kernel
+#include "sys_calls_utils.h"
+#include <asm/uaccess.h>
+
+/*
 system call number 246
-int get_process_log(pid_t pid,int size,struct forbidden_activity_info* user_mem)
 
 Description
 Returns in user_mem the first records of the forbidden activities size of the process with
@@ -19,3 +23,18 @@ Return values
 		o If size<0 errno should contain EINVAL
 		o If the policy feature is off for this process, errno should contain EINVAL .
 		o On any other failure errno should contain EINVAL
+
+*/
+
+int sys_get_process_log(pid_t pid , int size , forbidden_activity_info * user_mem) {
+	_CHECK_PID(pid);  		// check if pid >= 0
+	_PID_EXISTS(pid);		// check if pid exists in hash table
+	task_t * p = find_task_by_pid(pid);
+	if (size > p->num_of_violations || p->entry_policy == false) {
+		return _EINVAL;
+	}
+
+	user_mem = p->log_list_flush_size(p->log_list , size);
+	// read about copy to user
+	return 0;
+}
