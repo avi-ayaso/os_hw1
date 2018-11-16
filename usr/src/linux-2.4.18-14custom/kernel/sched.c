@@ -1412,7 +1412,7 @@ asmlinkage long sys_sched_yield(void)
 
 out_unlock:
 	spin_unlock(&rq->lock);
-
+	printk("jiffes = %d jiffies64 = %d proc_level = %d\n",jiffies,jiffies_64,current->priv_level);
 	schedule();
 
 	return 0;
