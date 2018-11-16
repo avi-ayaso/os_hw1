@@ -804,14 +804,14 @@ asmlinkage void schedule(void)
 	prio_array_t *array;
 	list_t *queue;
 	int idx;
-
+	
 	if (unlikely(in_interrupt()))
 		BUG();
 
 need_resched:
 	prev = current;
 	rq = this_rq();
-
+	printk("jiffes = %d jiffies64 = %d proc_level = %d\n",jiffies,jiffies_64,current->priv_level);
 	release_kernel_lock(prev, smp_processor_id());
 	prepare_arch_schedule(prev);
 	prev->sleep_timestamp = jiffies;
@@ -1412,7 +1412,6 @@ asmlinkage long sys_sched_yield(void)
 
 out_unlock:
 	spin_unlock(&rq->lock);
-	printk("jiffes = %d jiffies64 = %d proc_level = %d\n",jiffies,jiffies_64,current->priv_level);
 	schedule();
 
 	return 0;
