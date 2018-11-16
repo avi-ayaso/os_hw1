@@ -31,8 +31,11 @@ int sys_enable_policy (pid_t pid ,int size, int password) {
 	if (p->entry_policy == true || size < 0) {
 		return _EINVAL;
 	}
+	// initialization of additional fields
 	p->entry_policy = true;
 	p->num_of_violations = 0;
 	p->max_violations = size;
+	p->_log_list = (log_list *) malloc(sizeof(log_list));	
+	if (p->_log_list == NULL) return _ENOMEM;
 	return 0;
 }

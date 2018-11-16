@@ -141,9 +141,31 @@ extern spinlock_t mmlist_lock;
 
 typedef struct task_struct task_t;
 
+
+
 // for hw1 log file struct
 typedef struct forbidden_activity_info_t forbidden_activity_info;
-typedef log_list_t log_list;
+typedef struct  log_list_t log_list;
+
+
+// for hw1 log file struct implementation
+	struct forbidden_activity_info_t {
+		int syscall_req_level;	# the threshold of the sys call
+		int proc_level;			# the process privilege level at the time
+		int time;				# the time						 
+	};
+
+	// yellow part
+	struct log_list_t {
+		forbidden_activity_info _forbidden_activity;
+		struct list_head _list_node; // blue part
+		// TODO
+	};
+
+
+
+
+
 //
 
 extern void sched_init(void);
@@ -293,7 +315,6 @@ struct signal_struct {
 	spinlock_t		siglock;
 };
 
-
 #define INIT_SIGNALS {	\
 	count:		ATOMIC_INIT(1), 		\
 	action:		{ {{0,}}, }, 			\
@@ -323,14 +344,6 @@ extern struct user_struct root_user;
 
 typedef struct prio_array prio_array_t;
 
-// for hw1 log file struct implementation
-struct forbidden_activity_info {
-	int syscall_req_level;	# the threshold of the sys call
-	int proc_level;			# the process privilege level at the time
-	int time;				# the time
-	
-	//struct list_head _list;
-};
 
 struct task_struct {
 	/*
@@ -383,20 +396,10 @@ struct task_struct {
 	// for hw1 addtional fields
 	bool entry_policy;
 	int priv_level;
-	forbidden_activity_info * forbidden_log;
 	int max_violations;
 	int num_of_violations;
-	log_list * violation_list;
+	log_list * _log_list;
 	
-	//struct list_head log_list;
-
-	struct log_list_t {
-		log_list * _next;
-		log_list * _prev;
-		forbidden_activity_info _data;
-		// TODO
-	};
-
 	// end of hw1 additional fields
 
 
@@ -593,6 +596,12 @@ extern struct exec_domain	default_exec_domain;
     blocked:		{{0}},						\
     alloc_lock:		SPIN_LOCK_UNLOCKED,				\
     journal_info:	NULL,						\
+	/*		for hw1 swapper initilization		*/
+	entry_policy:	false,
+	priv_level:		2,				\
+	max_violations: 0,				\
+	num_of_violations: 0, 			\
+	_log_list: 	NULL , 				\
 }
 
 

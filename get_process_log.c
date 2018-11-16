@@ -1,6 +1,5 @@
 // this file is part of the kernel
 #include "sys_calls_utils.h"
-#include <asm/uaccess.h>
 
 /*
 system call number 246
@@ -34,7 +33,9 @@ int sys_get_process_log(pid_t pid , int size , forbidden_activity_info * user_me
 		return _EINVAL;
 	}
 
-	user_mem = p->log_list_flush_size(p->log_list , size);
-	// read about copy to user
+	if (copy_forbidden_activity_list_to_user(p->_log_list , user_mem , size) != 0) { 
+		return _EINVAL;
+	}
+	p->num_of_violations -= size;
 	return 0;
 }

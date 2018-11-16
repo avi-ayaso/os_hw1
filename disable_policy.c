@@ -1,6 +1,11 @@
 // this file is part of the kernel
 #include "sys_calls_utils.h"
 
+
+
+
+
+
 /* system call number 244
 
 Description
@@ -18,7 +23,7 @@ Return values
 		o If password is incorrect errno should contain EINVAL
 		o On any other failure errno should contain EINVAL
 
-
+\
 */
 int sys_disable_policy (pid_t pid ,int password)
 	_CHECK_PID(pid);  			// check if pid >= 0
@@ -30,7 +35,17 @@ int sys_disable_policy (pid_t pid ,int password)
 	_CHECK_PASSWORD(password); // check if password is 234123
 	p->entry_policy = false;
 	// should delete log here by function etc.
-	p->max_violations = 0;
-	p->num_of_violations = 0;
+
+	
+	if (p->_log_list != NULL) {
+		del_forbidden_activity_list(p->_log_list,p->num_of_violations);
+		p->num_of_violations = 0;
+		p->max_violations = 0;
+		free(p->_log_list);
+		p->_log_list = NULL;
+	}
+
 	return 0;
 }
+
+

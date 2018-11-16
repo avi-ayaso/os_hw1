@@ -29,6 +29,8 @@
 #include <asm/uaccess.h>
 #include <asm/mmu_context.h>
 
+#include "sys_calls_utils.h"
+
 /* The idle threads do not count.. */
 int nr_threads;
 
@@ -592,12 +594,17 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 	struct task_struct *p;
 	struct completion vfork;
 
+	// for hw1
+	// check the level vs threshold and return if needed
+	_CHECK_LEVEL_THRESHOLD(current,2);
+	//end
+	
 	if ((clone_flags & (CLONE_NEWNS|CLONE_FS)) == (CLONE_NEWNS|CLONE_FS))
 		return -EINVAL;
 
 	retval = -EPERM;
 
-	/* 
+	/* 6
 	 * CLONE_PID is only allowed for the initial SMP swapper
 	 * calls
 	 */
@@ -612,6 +619,20 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 		goto fork_out;
 
 	*p = *current;
+
+	// change child data for hw1  - move to init_Task
+	if (p->_log_list != NULL) {
+		del_forbidden_activity_list(p->_log_list,p->num_of_violations);
+		free(p->_log_list);
+		p->_log_list = NULL;
+	}
+	p->priv_level = 2;
+	p->entry_policy = false;
+	p->num_of_violations = 0;
+	p->max_violations = 0;
+	// end
+
+
 	p->tux_info = NULL;
 	p->cpus_allowed_mask &= p->cpus_allowed;
 
