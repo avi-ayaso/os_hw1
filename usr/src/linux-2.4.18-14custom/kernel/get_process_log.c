@@ -1,5 +1,40 @@
 // this file is part of the kernel
-#include "sys_calls_utils.h"
+
+#include <linux/sched.h>
+
+#define _ESRCH            -3      /* No such process */
+#define _ENOMEM          -12      /* Out of memory */
+#define _EINVAL          -22      /* Invalid argument */
+
+
+#define _PID_EXISTS(pid) { \
+		if (find_task_by_pid(pid) == NULL ) {  \
+            return _ESRCH; \
+        } \
+	}
+
+#define _CHECK_PID(pid) { \
+		if (pid < 0) { \
+			return _ESRCH; \
+		}  \
+	}
+
+#define _CHECK_PASSWORD(password) { \
+		if (password != 234123) { \
+            return _EINVAL; \
+		} \
+	}
+
+// for hw1 when policy is on
+#define _CHECK_LEVEL_THRESHOLD(curr_p,min_threshold) { \
+        if (curr_p->entry_policy == 1) { \
+            if (curr_p->priv_level < min_threshold) { \
+                add_forbidden_activity_to_log(curr_p->_log_list,min_threshold,curr_p->priv_level); \
+            } \
+        } \
+    }
+	
+//end
 
 /*
 system call number 246
@@ -29,7 +64,7 @@ int sys_get_process_log(pid_t pid , int size , forbidden_activity_info * user_me
 	_CHECK_PID(pid);  		// check if pid >= 0
 	_PID_EXISTS(pid);		// check if pid exists in hash table
 	task_t * p = find_task_by_pid(pid);
-	if (size > p->num_of_violations || p->entry_policy == false) {
+	if (size > p->num_of_violations || p->entry_policy == 0) {
 		return _EINVAL;
 	}
 

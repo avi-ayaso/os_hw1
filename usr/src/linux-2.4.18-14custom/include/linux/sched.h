@@ -150,9 +150,9 @@ typedef struct  log_list_t log_list;
 
 // for hw1 log file struct implementation
 	struct forbidden_activity_info_t {
-		int syscall_req_level;	# the threshold of the sys call
-		int proc_level;			# the process privilege level at the time
-		int time;				# the time						 
+		int syscall_req_level;	// the threshold of the sys call
+		int proc_level;			// the process privilege level at the time
+		int time;				// the time						 
 	};
 
 	// yellow part
@@ -392,9 +392,8 @@ struct task_struct {
 	unsigned long personality;
 	int did_exec:1;
 	pid_t pid;
-
-	// for hw1 addtional fields
-	bool entry_policy;
+	
+	int entry_policy;
 	int priv_level;
 	int max_violations;
 	int num_of_violations;
@@ -596,12 +595,11 @@ extern struct exec_domain	default_exec_domain;
     blocked:		{{0}},						\
     alloc_lock:		SPIN_LOCK_UNLOCKED,				\
     journal_info:	NULL,						\
-	/*		for hw1 swapper initilization		*/
-	entry_policy:	false,
+	entry_policy:	0,			\
 	priv_level:		2,				\
 	max_violations: 0,				\
 	num_of_violations: 0, 			\
-	_log_list: 	NULL , 				\
+	_log_list: NULL, 				\
 }
 
 

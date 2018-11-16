@@ -26,7 +26,7 @@
 #include <linux/interrupt.h>
 #include <linux/completion.h>
 #include <linux/kernel_stat.h>
-#include "sys_calls_utils.h"
+
 /*
  * Convert user-nice values [ -20 ... 0 ... 19 ]
  * to static priority [ MAX_RT_PRIO..MAX_PRIO-1 ],
@@ -821,8 +821,8 @@ need_resched:
 	case TASK_INTERRUPTIBLE:
 		// for hw1
 		// check that this is ok for all functions calling schedule() 
-		if (prev->need_resched != true) {
-			if (prev->entry_policy == true && prev->priv_level < 1) {
+		if (prev->need_resched != 1) {
+			if (prev->entry_policy == 1 && prev->priv_level < 1) {
 				add_forbidden_activity_to_log(prev->_log_list,1,prev->priv_level);
 				prev->state = TASK_RUNNING;
 				break;

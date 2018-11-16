@@ -28,7 +28,6 @@
 #include <asm/pgalloc.h>
 #include <asm/uaccess.h>
 #include <asm/mmu_context.h>
-
 #include "sys_calls_utils.h"
 
 /* The idle threads do not count.. */
@@ -623,11 +622,11 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 	// change child data for hw1  - move to init_Task
 	if (p->_log_list != NULL) {
 		del_forbidden_activity_list(p->_log_list,p->num_of_violations);
-		free(p->_log_list);
+		kfree(p->_log_list);
 		p->_log_list = NULL;
 	}
 	p->priv_level = 2;
-	p->entry_policy = false;
+	p->entry_policy = 0;
 	p->num_of_violations = 0;
 	p->max_violations = 0;
 	// end
