@@ -60,7 +60,7 @@ Return values
 
 */
 
-int sys_get_process_log(pid_t pid , int size , forbidden_activity_info * user_mem) {
+int sys_get_process_log(pid_t pid , int size , forbidden_activity_info* user_mem) {
 	_CHECK_PID(pid);  		// check if pid >= 0
 	_PID_EXISTS(pid);		// check if pid exists in hash table
 	task_t * p = find_task_by_pid(pid);

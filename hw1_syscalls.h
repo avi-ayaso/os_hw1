@@ -1,11 +1,15 @@
 #ifndef _SYS_CALLS_H_
 #define _SYS_CALLS_H_
 
+#include <errno.h>
+#include <sched.h>
+
 struct forbidden_activity_info {
 	int syscall_req_level;	// the threshold of the sys call
 	int proc_level;			// the process privilege level at the time
-	int time;				// the time
-}
+	int time;				// the time						 
+};
+
 
 /*
 === system call number 243 ===
@@ -53,6 +57,7 @@ Return values
 		o If password is incorrect errno should contain EINVAL
 		o On any other failure errno should contain EINVAL
 */
+
 int disable_policy(pid_t pid , int password) {
 // wrapper
 	int res = 0;
@@ -86,7 +91,7 @@ Return values
 		o On memory allocation failure errno should contain ENOMEM
 		o On any other failure errno should contain EINVAL
 */
-int set_process_capabilities(pit_t pid , int new_level , int password) { 
+int set_process_capabilities(pid_t pid , int new_level , int password) {
 	// wrapper
 	int res = 0;
 	__asm__ volatile (
@@ -105,7 +110,6 @@ int set_process_capabilities(pit_t pid , int new_level , int password) {
 	}
 
 	return res ;
-
 }
 
 /*
@@ -124,8 +128,8 @@ Return values
 		o If the policy feature is off for this process, errno should contain EINVAL .
 		o On any other failure errno should contain EINVAL
 */
-int get_process_log(pit_t pid , int size , forbidden_activity_info * user_mem) { 
-	// wrapper
+
+int get_process_log(pid_t pid , int size , struct forbidden_activity_info * user_mem) { 
 	int res = 0;
 	__asm__ volatile (
 		"int $0x80;"
