@@ -37,5 +37,6 @@ int sys_enable_policy (pid_t pid ,int size, int password) {
 	p->max_violations = size;
 	p->_log_list = (log_list *) malloc(sizeof(log_list));	
 	if (p->_log_list == NULL) return _ENOMEM;
+	INIT_LIST_HEAD(p->_log_list->_list_node);
 	return 0;
 }

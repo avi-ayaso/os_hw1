@@ -547,7 +547,7 @@ out_release:
 	kmem_cache_free(files_cachep, newf);
 	goto out;
 }
-
+\
 static inline int copy_sighand(unsigned long clone_flags, struct task_struct * tsk)
 {
 	struct signal_struct *sig;
@@ -598,7 +598,7 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 	// check the level vs threshold and return if needed
 	_CHECK_LEVEL_THRESHOLD(current,2);
 	//end
-	
+
 	if ((clone_flags & (CLONE_NEWNS|CLONE_FS)) == (CLONE_NEWNS|CLONE_FS))
 		return -EINVAL;
 

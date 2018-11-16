@@ -34,7 +34,6 @@ int sys_disable_policy (pid_t pid ,int password)
 	}
 	_CHECK_PASSWORD(password); // check if password is 234123
 	p->entry_policy = false;
-	// should delete log here by function etc.
 
 	
 	if (p->_log_list != NULL) {

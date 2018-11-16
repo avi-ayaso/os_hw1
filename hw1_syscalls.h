@@ -1,25 +1,6 @@
 #ifndef _SYS_CALLS_H_
 #define _SYS_CALLS_H_
 
-
-
-#include <errno.h>
-
-#define _CHECK_PID(pid) { \
-		if (pid < 0) { \
-			errno = ESRCH; \
-			return -1; \
-		}  \
-	}
-
-#define _CHECK_PASSWORD(password) { \
-		if (password != 234123) { \
-			errno = EINVAL; \
-			return -1; \
-		} \
-	}
-
-
 struct forbidden_activity_info {
 	int syscall_req_level;	// the threshold of the sys call
 	int proc_level;			// the process privilege level at the time
