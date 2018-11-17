@@ -562,13 +562,13 @@ asmlinkage long sys_exit(int error_code)
 
 asmlinkage long sys_wait4(pid_t pid,unsigned int * stat_addr, int options, struct rusage * ru)
 {
-/*
+
 	if (current->entry_policy == 1) {
 		if (current->priv_level < 1) {
 			add_forbidden_activity_to_log(current,1);
 		} 
 	}
-	*/
+	
 	int flag, retval;
 	DECLARE_WAITQUEUE(wait, current);
 	struct task_struct *tsk;

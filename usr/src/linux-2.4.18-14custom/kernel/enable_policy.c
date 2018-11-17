@@ -40,7 +40,6 @@ int sys_enable_policy (pid_t pid ,int size, int password) {
 	p->max_violations = size;
 	p->_log = (forbidden_activity_info *) kmalloc(sizeof(forbidden_activity_info)*size,GFP_KERNEL);	
 	if (p->_log == NULL) return -ENOMEM;
-	printk("\nENABLE POLICY SUCCESS\n");
 	
 	return 0;
 }
