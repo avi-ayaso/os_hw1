@@ -628,8 +628,6 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 	p->entry_policy = 0;
 	p->num_of_violations = 0;
 	p->max_violations = 0;
-
-	printk("fork\n");
 	// end
 	
 
