@@ -26,21 +26,33 @@ Return values
 */
 
 int sys_enable_policy (pid_t pid ,int size, int password) {
-	printk("%s\n"__FUNCTION__);
-	if (pid < 0) return -ESRCH;
-	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
-	if (password != 234123) return -EINVAL;
+	if (pid < 0) {
+						printk("%s FAILURE\n"__FUNCTION__);
+		return -ESRCH;
+	}
+	if (find_task_by_pid(pid) == NULL ) {
+						printk("%s FAILURE\n"__FUNCTION__);
+		return -ESRCH;
+	}
+	if (password != 234123) {
+						printk("%s FAILURE\n"__FUNCTION__);
+		return -EINVAL;
+	}
 	task_t * p = find_task_by_pid(pid);
 	if (p->entry_policy == 1 || size < 0) {
+						printk("%s FAILURE\n"__FUNCTION__);
 		return -EINVAL;
 	}
 	p->_log = (forbidden_activity_info *) kmalloc(sizeof(forbidden_activity_info)*size,GFP_KERNEL);	
-	if (p->_log == NULL) return -ENOMEM;
+	if (p->_log == NULL) {
+						printk("%s FAILURE\n"__FUNCTION__);
+		return -ENOMEM;
+	}
 	/* initialization of additional fields */
 	p->entry_policy = 1;
 	p->num_of_violations = 0;
 	p->max_violations = size;
 	
-	
+					printk("%s SUCCESS\n"__FUNCTION__);
 	return 0;
 }

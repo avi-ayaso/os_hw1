@@ -26,13 +26,23 @@ Return values
 */
 int sys_disable_policy (pid_t pid ,int password) {
 	printk("%s\n"__FUNCTION__);
-	if (pid < 0) return -ESRCH;
-	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
+	if (pid < 0) {
+						printk("%s FAILURE\n"__FUNCTION__);
+		return -ESRCH;
+	}
+	if (find_task_by_pid(pid) == NULL ) {
+						printk("%s FAILURE\n"__FUNCTION__);
+		return -ESRCH;
+	}
 	task_t * p = find_task_by_pid(pid);
 	if (p->entry_policy == 0) {
+						printk("%s FAILURE\n"__FUNCTION__);
 		return -EINVAL;
 	}
-	if (password != 234123) return -EINVAL;
+	if (password != 234123) {
+						printk("%s FAILURE\n"__FUNCTION__);
+		return -EINVAL;
+	}
 	p->entry_policy = 0;
 
 	
@@ -42,7 +52,7 @@ int sys_disable_policy (pid_t pid ,int password) {
 		kfree(p->_log);
 		p->_log = NULL;
 	}
-	
+					printk("%s SUCCESS\n"__FUNCTION__);
 	return 0;
 }
 

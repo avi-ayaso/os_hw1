@@ -45,12 +45,24 @@ Return values
 */
 
 int sys_get_process_log(pid_t pid , int size , forbidden_activity_info* user_mem) {
-	printk("%s\n"__FUNCTION__);
-	if (pid < 0) return -ESRCH;
+	if (pid < 0) {
+						printk("%s FAILURE\n"__FUNCTION__);
+		return -ESRCH;
+	}
+
 	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
 	task_t * p = find_task_by_pid(pid);
 	if (size > p->num_of_violations || p->entry_policy == 0) {
+						printk("%s FAILURE\n"__FUNCTION__);
 		return -EINVAL;
 	}
-	return copy_forbidden_activity_list_to_user(p , user_mem , size);
+	int res = copy_forbidden_activity_list_to_user(p , user_mem , size);
+	if (res != 0) {
+						printk("%s FAILURE\n"__FUNCTION__);
+	} 
+	else {
+						printk("%s SUCCESS\n"__FUNCTION__);
+
+	}
+	return res;
 }
