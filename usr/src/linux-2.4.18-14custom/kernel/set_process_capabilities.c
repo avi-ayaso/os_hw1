@@ -26,6 +26,7 @@ Return values
 
 
 int sys_set_process_capabilities (pid_t pid ,int new_level, int password) {
+	printk("%s\n"__FUNCTION__);
 	if (pid < 0) return -ESRCH;
 	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
 	if (new_level < 0 || new_level > 2 ) {

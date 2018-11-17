@@ -45,6 +45,7 @@ Return values
 */
 
 int sys_get_process_log(pid_t pid , int size , forbidden_activity_info* user_mem) {
+	printk("%s\n"__FUNCTION__);
 	if (pid < 0) return -ESRCH;
 	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
 	task_t * p = find_task_by_pid(pid);

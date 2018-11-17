@@ -26,6 +26,7 @@ Return values
 */
 
 int sys_enable_policy (pid_t pid ,int size, int password) {
+	printk("%s\n"__FUNCTION__);
 	if (pid < 0) return -ESRCH;
 	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
 	if (password != 234123) return -EINVAL;
