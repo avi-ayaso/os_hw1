@@ -585,11 +585,6 @@ extern struct exec_domain	default_exec_domain;
     blocked:		{{0}},						\
     alloc_lock:		SPIN_LOCK_UNLOCKED,				\
     journal_info:	NULL,						\
-	entry_policy:	0,			\
-	priv_level:		2,				\
-	max_violations: 0,				\
-	num_of_violations: 0, 			\
-	_log: NULL, 				\
 }
 
 
