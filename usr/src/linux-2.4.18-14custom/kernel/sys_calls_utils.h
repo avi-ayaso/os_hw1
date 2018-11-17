@@ -43,7 +43,8 @@ int copy_forbidden_activity_list_to_user(task_t * process , forbidden_activity_i
     unsigned long status = copy_to_user((void *)ret_val, (void *)(process->_log), sizeof(forbidden_activity_info)*size);
     if (status > 0) return _EINVAL;
     int index=0;
-    for (int i=size;i<process->num_of_violations;++i,++index){
+    int i=0;
+    for (i=size;i<process->num_of_violations;++i,++index){
         process->_log[index] = process->_log[i];
     }
     process->num_of_violations = index;
