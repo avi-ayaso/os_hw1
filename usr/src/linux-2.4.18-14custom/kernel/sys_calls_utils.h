@@ -4,8 +4,6 @@
 #include <asm/uaccess.h>
 #include <linux/slab.h>
 
-
-
 int add_forbidden_activity_to_log(task_t * _current , int _syscall_req_level) {
     int num_of_violations = _current->num_of_violations;
     int max_violations = _current->max_violations;

@@ -6,7 +6,7 @@
 
 
 // output will be in the given pointer
-int copy_forbidden_activity_list_to_user(task_t * process , forbidden_activity_info * ret_val , int size) {
+static int copy_forbidden_activity_list_to_user(task_t * process , forbidden_activity_info * ret_val , int size) {
     unsigned long status = copy_to_user((void *)ret_val, (void *)(process->_log), sizeof(forbidden_activity_info)*size);
     if (status > 0) return -22;
     int index=0;
