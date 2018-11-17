@@ -2,6 +2,7 @@
 
 #include <linux/slab.h>
 #include <linux/sched.h>
+#include <asm/uaccess.h>
 
 
 
