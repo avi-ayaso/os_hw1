@@ -32,7 +32,6 @@
 
 //end
 
-
 extern void sem_exit (void);
 extern struct task_struct *child_reaper;
 
