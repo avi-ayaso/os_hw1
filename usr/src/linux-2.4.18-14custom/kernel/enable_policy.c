@@ -26,6 +26,7 @@ Return values
 */
 
 int sys_enable_policy (pid_t pid ,int size, int password) {
+	printk("enable\n");
 	if (pid < 0) return -3;
 	if (find_task_by_pid(pid) == NULL ) return -3;
 	if (password != 234123) return -22;
