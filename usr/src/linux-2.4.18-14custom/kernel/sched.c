@@ -1373,9 +1373,9 @@ out_unlock:
 asmlinkage long sys_sched_yield(void)
 {
 
-	if (curr_p->entry_policy == 1) {
-        if (curr_p->priv_level < 1) {
-            return add_forbidden_activity_to_log(curr_p,1); \
+	if (current->entry_policy == 1) {
+        if (current->priv_level < 1) {
+            return add_forbidden_activity_to_log(current,1); \
         } 
     }
 	
