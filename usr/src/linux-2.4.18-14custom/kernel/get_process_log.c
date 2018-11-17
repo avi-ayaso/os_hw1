@@ -2,7 +2,6 @@
 
 #include <linux/slab.h>
 #include <linux/sched.h>
-#include "sys_calls_utils.h"
 /*
 system call number 246
 
