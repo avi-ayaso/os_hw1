@@ -819,16 +819,6 @@ need_resched:
 
 	switch (prev->state) {
 	case TASK_INTERRUPTIBLE:
-		// for hw1
-		// check that this is ok for all functions calling schedule() 
-		if (prev->need_resched != 1) {
-			if (prev->entry_policy == 1 && prev->priv_level < 1) {
-				add_forbidden_activity_to_log(prev->_log_list,1,prev->priv_level);
-				prev->state = TASK_RUNNING;
-				break;
-			}
-		}
-		// end
 		if (unlikely(signal_pending(prev))) {
 			prev->state = TASK_RUNNING;
 			break;

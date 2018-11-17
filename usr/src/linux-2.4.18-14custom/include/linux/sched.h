@@ -144,7 +144,6 @@ typedef struct task_struct task_t;
 
 // for hw1 log file struct
 typedef struct forbidden_activity_info forbidden_activity_info;
-typedef struct  log_list_t log_list;
 
 
 // for hw1 log file struct implementation
@@ -153,14 +152,6 @@ struct forbidden_activity_info {
 	int proc_level;			// the process privilege level at the time
 	int time;				// the time						 
 };
-
-// yellow part
-struct log_list_t {
-	forbidden_activity_info _forbidden_activity;
-	struct list_head _list_node; // blue part
-	// TODO
-};
-
 
 
 
@@ -396,7 +387,7 @@ struct task_struct {
 	int priv_level;
 	int max_violations;
 	int num_of_violations;
-	log_list * _log_list;
+	forbidden_activity_info * _log;
 	
 	// end of hw1 additional fields
 
@@ -598,7 +589,7 @@ extern struct exec_domain	default_exec_domain;
 	priv_level:		2,				\
 	max_violations: 0,				\
 	num_of_violations: 0, 			\
-	_log_list: NULL, 				\
+	_log: NULL, 				\
 }
 
 

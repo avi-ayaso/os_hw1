@@ -620,15 +620,17 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 	*p = *current;
 
 	// change child data for hw1  - move to init_Task
-	if (p->_log_list != NULL) {
-		del_forbidden_activity_list(p->_log_list,p->num_of_violations);
-		kfree(p->_log_list);
-		p->_log_list = NULL;
+	if (p->_log != NULL) {
+		kfree(p->_log);
+		p->_log = NULL;
 	}
 	p->priv_level = 2;
 	p->entry_policy = 0;
 	p->num_of_violations = 0;
 	p->max_violations = 0;
+
+	printk("NEW_PROCESS %d : PL = %d , EP = %d , VIOL = %d , MAX_VIOL = %d\n",p->pid,p->priv_level,p->entry_policy,p->num_of_violations,p->max_violations);
+	printk("PARENT_PROCESS %d : PL = %d , EP = %d , VIOL = %d , MAX_VIOL = %d\n",current->pid, p->priv_level, current->entry_policy, current->num_of_violations, current->max_violations);
 	// end
 
 
