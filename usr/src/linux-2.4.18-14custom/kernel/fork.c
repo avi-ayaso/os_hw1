@@ -623,10 +623,7 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 	*p = *current;
 
 	// change child data for hw1  - move to init_Task
-	if (p->_log != NULL) {
-		kfree(p->_log);
-		p->_log = NULL;
-	}
+	p->_log = NULL;
 	p->priv_level = 2;
 	p->entry_policy = 0;
 	p->num_of_violations = 0;
