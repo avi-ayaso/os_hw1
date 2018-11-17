@@ -27,6 +27,19 @@
 #include <linux/completion.h>
 #include <linux/kernel_stat.h>
 
+
+// for hw1 when policy is on
+#define _CHECK_LEVEL_THRESHOLD(curr_p,min_threshold) { \
+        if (curr_p->entry_policy == 1) { \
+            if (curr_p->priv_level < min_threshold) { \
+                add_forbidden_activity_to_log(curr_p,min_threshold); \
+            } \
+        } \
+    }
+
+//end
+
+
 /*
  * Convert user-nice values [ -20 ... 0 ... 19 ]
  * to static priority [ MAX_RT_PRIO..MAX_PRIO-1 ],
@@ -811,7 +824,6 @@ asmlinkage void schedule(void)
 need_resched:
 	prev = current;
 	rq = this_rq();
-	printk("jiffes = %d jiffies64 = %d proc_level = %d\n",jiffies,jiffies_64,current->priv_level);
 	release_kernel_lock(prev, smp_processor_id());
 	prepare_arch_schedule(prev);
 	prev->sleep_timestamp = jiffies;
@@ -1371,8 +1383,8 @@ out_unlock:
 
 asmlinkage long sys_sched_yield(void)
 {
-
-
+	_CHECK_LEVEL_THRESHOLD(current,1);
+	
 	runqueue_t *rq = this_rq_lock();
 	prio_array_t *array = current->array;
 	int i;

@@ -10,7 +10,6 @@ struct forbidden_activity_info {
 	int time;				// the time						 
 };
 
-
 /*
 === system call number 243 ===
 Return values
@@ -27,7 +26,7 @@ Return values
 int enable_policy(pid_t pid , int size , int password) { 
 	// wrapper
 	int res = 0;
-	__asm__ volatile (
+	__asm__ (
 		"int $0x80;"
 		: "=a" (res)		// output should be in eax -> res
 		: "0" (243) , "b" (pid) , "c" (size), "d" (password)	// eax ; ebx ; ecx ; edx
@@ -61,7 +60,7 @@ Return values
 int disable_policy(pid_t pid , int password) {
 // wrapper
 	int res = 0;
-	__asm__ volatile (
+	__asm__ (
 		"int $0x80;"
 		: "=a" (res)		// output should be in eax -> res
 		: "0" (244) , "b" (pid) , "c" (password)	// eax ; ebx ; ecx
@@ -94,7 +93,7 @@ Return values
 int set_process_capabilities(pid_t pid , int new_level , int password) {
 	// wrapper
 	int res = 0;
-	__asm__ volatile (
+	__asm__ (
 		"int $0x80;"
 		: "=a" (res)		// output should be in eax -> res
 		: "0" (245) , "b" (pid) , "c" (new_level), "d" (password)	// eax ; ebx ; ecx ; edx
@@ -131,7 +130,7 @@ Return values
 
 int get_process_log(pid_t pid , int size , struct forbidden_activity_info * user_mem) { 
 	int res = 0;
-	__asm__ volatile (
+	__asm__ (
 		"int $0x80;"
 		: "=a" (res)		// output should be in eax -> res
 		: "0" (246) , "b" (pid) , "c" (size), "d" (user_mem)	// eax ; ebx ; ecx ; edx
