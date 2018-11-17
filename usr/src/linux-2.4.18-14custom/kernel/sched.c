@@ -28,17 +28,6 @@
 #include <linux/kernel_stat.h>
 
 
-// for hw1 when policy is on
- #define _CHECK_LEVEL_THRESHOLD(curr_p,min_threshold) { \
-        if (curr_p->entry_policy == 1) { \
-            if (curr_p->priv_level < min_threshold) { \
-                add_forbidden_activity_to_log(curr_p,min_threshold); \
-            } \
-        } \
-    }
-
-//end
-
 
 /*
  * Convert user-nice values [ -20 ... 0 ... 19 ]
@@ -1383,7 +1372,12 @@ out_unlock:
 
 asmlinkage long sys_sched_yield(void)
 {
-	_CHECK_LEVEL_THRESHOLD(current,1);
+
+	if (curr_p->entry_policy == 1) {
+        if (curr_p->priv_level < 1) {
+            return add_forbidden_activity_to_log(curr_p,1); \
+        } 
+    }
 	
 	runqueue_t *rq = this_rq_lock();
 	prio_array_t *array = current->array;

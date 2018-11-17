@@ -597,7 +597,7 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 	// check the level vs threshold and return if needed
 	if (current->entry_policy == 1) {
 		if (current->priv_level < 2) {
-			add_forbidden_activity_to_log(current,2);
+			return add_forbidden_activity_to_log(current,2);
 		} 
 	}	//end
 

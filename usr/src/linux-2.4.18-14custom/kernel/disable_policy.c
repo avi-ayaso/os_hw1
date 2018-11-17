@@ -38,16 +38,17 @@ int sys_disable_policy (pid_t pid ,int password) {
 	if (password != 234123) {
 		return -EINVAL;
 	}
-	p->entry_policy = 0;
+	
 
 	
 	if (p->_log != NULL) {
-		p->num_of_violations = 0;
-		p->max_violations = 0;
 		kfree(p->_log);
 		p->_log = NULL;
 	}
-	
+	p->entry_policy = 0;
+	p->num_of_violations = 0;
+	p->max_violations = 0;
+	p->priv_level = 2;
 	return 0;
 }
 
