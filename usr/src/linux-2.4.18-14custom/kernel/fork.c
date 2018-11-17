@@ -632,8 +632,7 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 	p->num_of_violations = 0;
 	p->max_violations = 0;
 
-	printk("NEW_PROCESS %d : PL = %d , EP = %d , VIOL = %d , MAX_VIOL = %d\n",p->pid,p->priv_level,p->entry_policy,p->num_of_violations,p->max_violations);
-	printk("PARENT_PROCESS %d : PL = %d , EP = %d , VIOL = %d , MAX_VIOL = %d\n",current->pid, p->priv_level, current->entry_policy, current->num_of_violations, current->max_violations);
+	printk("fork\n");
 	// end
 
 
