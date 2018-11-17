@@ -33,13 +33,13 @@ int sys_enable_policy (pid_t pid ,int size, int password) {
 	if (p->entry_policy == 1 || size < 0) {
 		return -EINVAL;
 	}
-	
+	p->_log = (forbidden_activity_info *) kmalloc(sizeof(forbidden_activity_info)*size,GFP_KERNEL);	
+	if (p->_log == NULL) return -ENOMEM;
 	/* initialization of additional fields */
 	p->entry_policy = 1;
 	p->num_of_violations = 0;
 	p->max_violations = size;
-	p->_log = (forbidden_activity_info *) kmalloc(sizeof(forbidden_activity_info)*size,GFP_KERNEL);	
-	if (p->_log == NULL) return -ENOMEM;
+	
 	
 	return 0;
 }
