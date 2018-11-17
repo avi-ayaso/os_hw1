@@ -45,8 +45,12 @@ Return values
 */
 
 int sys_get_process_log(pid_t pid , int size , forbidden_activity_info* user_mem) {
-	if (pid < 0) return -ESRCH;
-	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
+	if (pid < 0) {
+		return -ESRCH;
+	}
+	if (find_task_by_pid(pid) == NULL ) {
+		return -ESRCH;
+	}
 	task_t * p = find_task_by_pid(pid);
 	if (size > p->num_of_violations || p->entry_policy == 0) {
 		return -EINVAL;

@@ -26,12 +26,18 @@ Return values
 
 
 int sys_set_process_capabilities (pid_t pid ,int new_level, int password) {
-	if (pid < 0) return -ESRCH;
-	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
+	if (pid < 0) {
+		return -ESRCH;
+	}
+	if (find_task_by_pid(pid) == NULL ) {
+		return -ESRCH;
+	}
 	if (new_level < 0 || new_level > 2 ) {
 		return -EINVAL;
 	}
-	if (password != 234123) return -EINVAL;
+	if (password != 234123) {
+		return -EINVAL;
+	}
 	task_t * p = find_task_by_pid(pid);
 	if (p->entry_policy == 0) {
 		return -EINVAL;
