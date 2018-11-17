@@ -41,7 +41,7 @@ int sys_disable_policy (pid_t pid ,int password) {
 		kfree(p->_log);
 		p->_log = NULL;
 	}
-
+	printk("\nDISABLE POLICY SUCCESS\n");
 	return 0;
 }
 

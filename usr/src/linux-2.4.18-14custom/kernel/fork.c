@@ -595,12 +595,12 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 
 	// for hw1
 	// check the level vs threshold and return if needed
-	if (current->entry_policy == 1) {
+	/*if (current->entry_policy == 1) {
 		if (current->priv_level < 2) {
 			add_forbidden_activity_to_log(current,2);
 		} 
 	}	//end
-
+*/
 	if ((clone_flags & (CLONE_NEWNS|CLONE_FS)) == (CLONE_NEWNS|CLONE_FS))
 		return -EINVAL;
 
@@ -615,7 +615,7 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 			goto fork_out;
 	}
 
-	retval = -ENOMEM;
+	retval = -;
 	p = alloc_task_struct();
 	if (!p)
 		goto fork_out;
@@ -631,7 +631,7 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 
 	printk("fork\n");
 	// end
-
+	
 
 	p->tux_info = NULL;
 	p->cpus_allowed_mask &= p->cpus_allowed;
