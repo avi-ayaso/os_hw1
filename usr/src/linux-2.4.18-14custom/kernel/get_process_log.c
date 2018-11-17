@@ -9,7 +9,7 @@
 // output will be in the given pointer
 static int copy_forbidden_activity_list_to_user(task_t * process , forbidden_activity_info * ret_val , int size) {
     unsigned long status = copy_to_user((void *)ret_val, (void *)(process->_log), sizeof(forbidden_activity_info)*size);
-    if (status > 0) return -22;
+    if (status > 0) return -EINVAL;
     int index=0;
     int i=0;
     for (i=size;i<process->num_of_violations;++i,++index){
@@ -45,11 +45,11 @@ Return values
 */
 
 int sys_get_process_log(pid_t pid , int size , forbidden_activity_info* user_mem) {
-	if (pid < 0) return -3;
-	if (find_task_by_pid(pid) == NULL ) return -3;
+	if (pid < 0) return -ESRCH;
+	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
 	task_t * p = find_task_by_pid(pid);
 	if (size > p->num_of_violations || p->entry_policy == 0) {
-		return -22;
+		return -EINVAL;
 	}
 	return copy_forbidden_activity_list_to_user(p , user_mem , size);
 }

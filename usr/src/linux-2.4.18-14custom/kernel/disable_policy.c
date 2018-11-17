@@ -25,13 +25,13 @@ Return values
 \
 */
 int sys_disable_policy (pid_t pid ,int password) {
-	if (pid < 0) return -3;
-	if (find_task_by_pid(pid) == NULL ) return -3;
+	if (pid < 0) return -ESRCH;
+	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
 	task_t * p = find_task_by_pid(pid);
 	if (p->entry_policy == 0) {
-		return -22;
+		return -EINVAL;
 	}
-	if (password != 234123) return -22;
+	if (password != 234123) return -EINVAL;
 	p->entry_policy = 0;
 
 	

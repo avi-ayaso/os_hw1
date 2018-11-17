@@ -26,13 +26,12 @@ Return values
 */
 
 int sys_enable_policy (pid_t pid ,int size, int password) {
-	printk(KERN_DEBUG "hello\n");
-	if (pid < 0) return -3;
-	if (find_task_by_pid(pid) == NULL ) return -3;
-	if (password != 234123) return -22;
+	if (pid < 0) return -ESRCH;
+	if (find_task_by_pid(pid) == NULL ) return -ESRCH;
+	if (password != 234123) return -EINVAL;
 	task_t * p = find_task_by_pid(pid);
 	if (p->entry_policy == 1 || size < 0) {
-		return -22;
+		return -EINVAL;
 	}
 	
 	/* initialization of additional fields */
@@ -40,6 +39,6 @@ int sys_enable_policy (pid_t pid ,int size, int password) {
 	p->num_of_violations = 0;
 	p->max_violations = size;
 	p->_log = (forbidden_activity_info *) kmalloc(sizeof(forbidden_activity_info)*size,GFP_KERNEL);	
-	if (p->_log == NULL) return -12;
+	if (p->_log == NULL) return -ENOMEM;
 	return 0;
 }
