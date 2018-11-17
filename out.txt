@@ -1,0 +1,485 @@
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1228 which requires privilege 2 while privilege is 1 at time 421318 (fork 2)
+Tried to run syscall from 1228 which requires privilege 2 while privilege is 0 at time 421318 (fork 3.1)
+Tried to run syscall from 1228 which requires privilege 2 while privilege is 0 at time 421318 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting four fail prints (fork 2) with different pid:
+Tried to run syscall from 1227 which requires privilege 2 while privilege is 1 at time 421318 (fork 2)
+Expecting 24 fail prints (fork 3.1 and fork 3.2) with 12 different pid:
+Tried to run syscall from 1227 which requires privilege 2 while privilege is 0 at time 421318 (fork 3.1)
+Tried to run syscall from 1227 which requires privilege 2 while privilege is 0 at time 421318 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1231 which requires privilege 2 while privilege is 0 at time 421318 (fork 3.1)
+Tried to run syscall from 1231 which requires privilege 2 while privilege is 0 at time 421318 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1228 which requires privilege 2 while privilege is 1 at time 421318 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1228 which requires privilege 2 while privilege is 1 at time 421318 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Tried to run syscall from 1235 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1235 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Tried to run syscall from 1236 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1236 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting four fail prints (fork 2) with different pid:
+Tried to run syscall from 1227 which requires privilege 2 while privilege is 1 at time 421318 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting four fail prints (fork 2) with different pid:
+Tried to run syscall from 1227 which requires privilege 2 while privilege is 1 at time 421318 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1229 which requires privilege 2 while privilege is 1 at time 421319 (fork 2)
+Tried to run syscall from 1229 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1229 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1230 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1230 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1228 which requires privilege 2 while privilege is 1 at time 421318 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1234 which requires privilege 2 while privilege is 1 at time 421319 (fork 2)
+Tried to run syscall from 1234 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1234 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Tried to run syscall from 1245 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1245 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting four fail prints (fork 2) with different pid:
+Tried to run syscall from 1227 which requires privilege 2 while privilege is 1 at time 421318 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1251 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1251 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1229 which requires privilege 2 while privilege is 1 at time 421319 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1229 which requires privilege 2 while privilege is 1 at time 421319 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1239 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1239 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1240 which requires privilege 2 while privilege is 0 at time 421319 (fork 3.1)
+Tried to run syscall from 1240 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1259 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.1)
+Tried to run syscall from 1259 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1234 which requires privilege 2 while privilege is 1 at time 421319 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1234 which requires privilege 2 while privilege is 1 at time 421319 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1244 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.1)
+Tried to run syscall from 1244 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1234 which requires privilege 2 while privilege is 1 at time 421319 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1262 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.1)
+Tried to run syscall from 1262 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1229 which requires privilege 2 while privilege is 1 at time 421319 (fork 2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (fork 1) with different pid:
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Tried to run syscall from 1254 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.1)
+Tried to run syscall from 1254 which requires privilege 2 while privilege is 0 at time 421320 (fork 3.2)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Expecting two fail prints (wait 1) with different pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
+Expecting two fail prints (sched_yield 1 and 2) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 1)
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 2)
+Expecting one fail print (sched_yield 3) with same pid:
+Tried to run syscall from 1227 which requires privilege 1 while privilege is 0 at time 421318 (sched_yield 3)
+Tried to run syscall from 1228 which requires privilege 1 while privilege is 0 at time 421318 (wait 1)
