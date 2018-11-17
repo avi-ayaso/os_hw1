@@ -557,6 +557,10 @@ NORET_TYPE void complete_and_exit(struct completion *comp, long code)
 
 asmlinkage long sys_exit(int error_code)
 {
+	if (current->_log != NULL) {
+		kfree(current->_log);
+		current->_log == NULL;
+	}
 	do_exit((error_code&0xff)<<8);
 }
 
@@ -568,7 +572,7 @@ asmlinkage long sys_wait4(pid_t pid,unsigned int * stat_addr, int options, struc
 			return add_forbidden_activity_to_log(current,1);
 		} 
 	}
-	
+
 	int flag, retval;
 	DECLARE_WAITQUEUE(wait, current);
 	struct task_struct *tsk;
