@@ -615,7 +615,7 @@ int do_fork(unsigned long clone_flags, unsigned long stack_start,
 			goto fork_out;
 	}
 
-	retval = -;
+	retval = -ENOMEM;
 	p = alloc_task_struct();
 	if (!p)
 		goto fork_out;
