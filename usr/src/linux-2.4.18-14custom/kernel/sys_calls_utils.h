@@ -31,9 +31,8 @@
 // for hw1 when policy is on
 #define _CHECK_LEVEL_THRESHOLD(curr_p,min_threshold) { \
         if (curr_p->entry_policy == 1) { \
-			printk("PROCESS %d : PL = %d , MIN_THRESHOLD = %d\n",p->pid,p->priv_level,min_threshold); \
             if (curr_p->priv_level < min_threshold) { \
-                add_forbidden_activity_to_log(curr_p,min_threshold,curr_p->priv_level); \
+                add_forbidden_activity_to_log(curr_p,min_threshold); \
             } \
         } \
     }
@@ -51,12 +50,12 @@ int copy_forbidden_activity_list_to_user(task_t * process , forbidden_activity_i
     return 0;
 }
 
-int add_forbidden_activity_to_log(task_t * _current , int _syscall_req_level , int _proc_level) {
+int add_forbidden_activity_to_log(task_t * _current , int _syscall_req_level) {
     int num_of_violations = _current->num_of_violations;
     int max_violations = _current->max_violations;
     if (num_of_violations == max_violations) return _EINVAL;
     _current->_log[num_of_violations].syscall_req_level = _syscall_req_level;
-    _current->_log[num_of_violations].proc_level = _proc_level;
+    _current->_log[num_of_violations].proc_level = _current->priv_level;
     _current->_log[num_of_violations].time = (int)jiffies;
     _current->num_of_violations++;
     return _EINVAL;
