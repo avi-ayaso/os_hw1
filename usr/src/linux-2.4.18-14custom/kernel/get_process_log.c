@@ -2,7 +2,7 @@
 
 #include <linux/slab.h>
 #include <linux/sched.h>
-
+#include "sys_calls_utils.h"
 /*
 system call number 246
 
@@ -28,7 +28,7 @@ Return values
 */
 
 int sys_get_process_log(pid_t pid , int size , forbidden_activity_info* user_mem) {
-	if (pid < 0) return -3
+	if (pid < 0) return -3;
 	if (find_task_by_pid(pid) == NULL ) return -3;
 	task_t * p = find_task_by_pid(pid);
 	if (size > p->num_of_violations || p->entry_policy == 0) {
