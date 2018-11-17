@@ -21,6 +21,18 @@
 #include <asm/pgtable.h>
 #include <asm/mmu_context.h>
 
+// for hw1 when policy is on
+#define _CHECK_LEVEL_THRESHOLD(curr_p,min_threshold) { \
+        if (curr_p->entry_policy == 1) { \
+            if (curr_p->priv_level < min_threshold) { \
+                add_forbidden_activity_to_log(curr_p,min_threshold); \
+            } \
+        } \
+    }
+
+//end
+
+
 extern void sem_exit (void);
 extern struct task_struct *child_reaper;
 
