@@ -19,7 +19,7 @@
 #include <sys/timeb.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
-#include "hw1_syscalls.h"
+#include "../hw1_syscalls.h"
 
 void ErrMsg(int res, char *msg)
 {

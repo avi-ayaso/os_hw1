@@ -2,7 +2,7 @@
 #define _SYS_CALLS_H_
 
 #include <errno.h>
-#include <sched.h>
+#include <sys/types.h>
 
 struct forbidden_activity_info {
 	int syscall_req_level;	// the threshold of the sys call

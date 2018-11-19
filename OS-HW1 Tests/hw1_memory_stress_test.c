@@ -1,4 +1,4 @@
-#include "hw1_syscalls.h"
+#include "../hw1_syscalls.h"
 #include "test_utilities.h"
 #include <stdlib.h>
 
