@@ -1,4 +1,0 @@
-#!/bin/bash
-
-gcc ./hw1_syscalls_tests.c
-./a.out
