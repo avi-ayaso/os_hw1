@@ -3,6 +3,10 @@
 
 #include <errno.h>
 #include <sys/types.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+ #include <unistd.h>
+#include <sched.h>
 
 struct forbidden_activity_info {
 	int syscall_req_level;	// the threshold of the sys call

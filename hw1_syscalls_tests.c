@@ -117,7 +117,7 @@ int main() {
   print_errno(fptr);
   set_process_capabilities(getpid(),0,234123);
   print_errno(fptr);
-  wait(); // FAIL in both
+  wait(NULL); // FAIL in both
   if (initial) printf("Expecting two fail prints (wait 1) with different pid:\n");
   if (!get_process_log(getpid(),1,log)) {
     printf("Tried to run syscall from %d which requires privilege %d while privilege is %d at time %d (wait 1)\n",getpid(),log[0].syscall_req_level,log[0].proc_level,log[0].time);

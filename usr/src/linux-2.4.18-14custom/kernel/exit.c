@@ -44,6 +44,12 @@ static void release_task(struct task_struct * p)
 	current->cnswap += p->nswap + p->cnswap;
 	sched_exit(p);
 	p->pid = 0;
+	
+	if (p->_log != NULL) {
+		kfree(p->_log);
+		p->_log == NULL;
+	}
+	
 	free_task_struct(p);
 }
 
@@ -557,10 +563,6 @@ NORET_TYPE void complete_and_exit(struct completion *comp, long code)
 
 asmlinkage long sys_exit(int error_code)
 {
-	if (current->_log != NULL) {
-		kfree(current->_log);
-		current->_log == NULL;
-	}
 	do_exit((error_code&0xff)<<8);
 }
 
